@@ -1,0 +1,111 @@
+.wizardFormBox{
+    height: 100vh;
+    width: 100%;
+    background: rgb(9,68,129);
+    background: linear-gradient(252deg, rgba(9,68,129,1) 47%, rgba(7,56,101,1) 55%);
+}
+
+.tyWizardBox{
+    overflow: hidden;
+}
+.wizardFormBox .form-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background: rgb(9,68,129);
+  background: linear-gradient(252deg, rgba(9,68,129,1) 47%, rgba(7,56,101,1) 55%);
+}
+
+.wizardFormBox .form-box .form-wizard {
+  max-height: 800px;
+  max-width: 1000px;
+}
+
+.wizardFormBox .sucessBox{ 
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+  justify-content: center;
+  transform: translate(0%, 50%);
+  background: #fff;
+  width: 75%;
+  margin: auto;
+  padding: 25px;
+  background: rgb(9, 68, 139);
+  box-shadow: 0px 0px 4px 0px rgba(255,255,255, 0.8);
+  display: none;
+}
+
+.success-animation {
+    margin: 15px auto;
+}
+
+.checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px #4bb71b;
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+    position:relative;
+    top: 5px;
+    right: 5px;
+   margin: 0 auto;
+}
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: #fff;
+    fill: #4bb71b;
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+ 
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+
+.sucessBox h2 {
+    color: #fff;
+    margin-top: 1rem;
+    font-weight: 500;
+}
+
+.sucessBox p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    color: #fff;
+    padding-bottom: 15px;
+}
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #4bb71b;
+    }
+}
